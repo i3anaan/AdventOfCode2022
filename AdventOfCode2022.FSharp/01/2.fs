@@ -17,7 +17,7 @@ let rec summed (input: list<option<int>>) (cum: int) =
         | [] -> 
             printfn "Empty"
             // failwith "crash"
-            [cum]
+            List.empty<int>
         | x :: xs -> 
             match x with 
                 | Some x -> 
@@ -32,15 +32,5 @@ let rec summed (input: list<option<int>>) (cum: int) =
 
 let result: list<int> = summed (Seq.toList parsed) 0
 
-let rec maxList (input: list<int>) (currentMax: int): int =
-    match input with
-    | [] -> currentMax
-    | x::xs -> 
-        match x > currentMax with
-            | true -> maxList xs x
-            | false -> maxList xs currentMax
-
 for x in result do
     printfn "value: %d" x
-
-(maxList result 0) |> printfn "Max: %d" 
