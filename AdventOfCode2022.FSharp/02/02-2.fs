@@ -26,8 +26,7 @@ let getBeatingMove (move: Move) =
     | Paper -> Scissor
     | Scissor -> Rock
 
-let getLosingMove (move: Move) =
-    move |> getBeatingMove |> getBeatingMove
+let getLosingMove (move: Move) = getBeatingMove >> getBeatingMove
 
 let determineMyMove (oppMove: Move) (fixedResult: Result) =
     match fixedResult with
