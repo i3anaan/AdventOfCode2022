@@ -44,6 +44,7 @@ let calculate =
         | i ->  let updatedState =  fromSelector state ||> toSelector
                 move (count - 1) fromSelector toSelector updatedState
 
+    // Answer: WHTLRMZRC
     move 8 (from 3) (towards 2) stacks
     |> move 1 (from 9) (towards 5)
     |> move 5 (from 4) (towards 7)
