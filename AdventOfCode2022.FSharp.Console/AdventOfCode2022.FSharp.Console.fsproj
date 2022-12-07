@@ -6,11 +6,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="06\06-1.fs" />
+    <Compile Include="06\06-2.fs" />
+    <Content Include="06\input.txt" />
+    <Content Include="05\input.txt" />
+    <Compile Include="05\05-2.fs" />
+    <Compile Include="05\05-1.fs" />
     <Content Include="04\input.txt" />
+    <Compile Include="04\04-2.fs" />
     <Compile Include="04\04-1.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
-
-  <ItemGroup />
 
 </Project>
